@@ -1,3 +1,1 @@
-﻿  Source.C
-C:\Users\Administrator\Desktop\hyun\Program\Source.C(13,2): warning C4098: 'main': 'void' 함수에서 값을 반환하고 있습니다.
-  Program.vcxproj -> C:\Users\Administrator\Desktop\hyun\Program\x64\Debug\Program.exe
+﻿  Program.vcxproj -> C:\Users\Administrator\Desktop\C-language-Lecture\Program\x64\Debug\Program.exe

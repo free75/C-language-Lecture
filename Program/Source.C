@@ -1,14 +1,126 @@
 #include <stdio.h>
 
 
-// main() : 프로그램의 진입점 역할을 수행하는 함수입니다.
+//contrl A + control C = 복사 , control V = 붙여넣기
+//control S = 저장하기
 void main()
 {
-	// ; (세미 콜론) : 한 문자의 끝을 알려주는 기호입니다.
-	printf("Standard\n"); // 출력하려는 문자 뒤에 \n을 쓰게 되면 쓴 문자 뒤에 줄바꿈이 나타나게 된다.
+#pragma region 변수
+	//데이터를 저장할 수 있는 매모리 공간을 생성하는 것입니다. 여러 코드들을 묶어놓을 수 있는 기능이다.
 
-	// \n (개행 문자) : 해당하는 위치를 한 칸 아래로 내려주는 문자입니다.
-	printf("안녕하세요~");
 
-	return 0;
+#pragma endregion
+
+#pragma region 자료형
+	// 데이터를 저장하기 위해 데이터의 형태를 정해주는 것입니다. 
+	// 자료형은 각각의 자료형마다 크기가 정해져 있으며, 자료형의
+	// 크기는 바이트 단위로 이루어져 있으며, 자료형의 경우 자료형에
+	// 따라 저장할 수 있는 값의 종류와 범위가 결정됩니다.
+
+#pragma endregion
+#pragma region 변수의 이름 규칙
+
+	// 1. 변수의 이름은 대소문자를 구분합니다.
+	// ex) int health;
+	// ex) int HEALTH;
+
+	// 2. 변수의 이름으로 예약어를 사용할 수 있습니다.
+	// ex) char char;
+
+	// 3. 변수의 이름에는 공백이 포함될 수 없습니다.
+	// ex) float time Delta;
+
+	// 4. 변수의 이름으로 특수 문자는 "_", "$"만 사용할 수 있습니다.
+	// ex) long currency$;
+	// ex) short under_score;
+
+	// 5. 변수의 이름은 숫자로 시작할 수 없습니다.
+	// ex) int 5day
+	// ex) int year2022;
+
+	// 화면 확대 or 축소하는 방법 : control + 마우스 휠로 조정
+#pragma endregion
+
+#pragma region 서식 지정자
+	// 변수의 값을 출력하기 위해 자료형의 정보를 명시적으로
+	// 지정해주는 것입니다.
+
+
+
+
+	// * 중요 원하는 부분만 디버거 하는 방법: 왼쪽을 마우스 커서로 움직일 경우 동그라미들이 보이게 된다.
+	// 그걸 클릭할 경우, 디버거할 부분의 처음과 끝을 지정할 수 있게 되는데
+	// 하나씩 확인하려면, 맨 아래에 로컬이라는 글자를 클릭 후 지정한 디버거 구간 안에 있는
+	// 문장들을 창 위에 있는 아래 화살표 모양인 한 단계씩 코드 실행을 클릭 후 디버거를 할 수 있다.
+
+
+	char character = 'A';
+
+	int integer = 10;
+
+	float decimal = 5.5f;
+
+	int HP = 300;
+
+	// 서식 지정자의 경우 하나의 표준 출력 함수에 여러 개의
+	// 서식을 넣을 수 있으며, 서식 지정자의 순서는 왼쪽에서
+	// 부터 시작합니다.
+
+	printf("character : %c \ninteger : %d \ndecimal : %f", character, integer, decimal);
+	// 서식 지정자는 각각의 서식에 따라 원하는 데이터를 출력
+	//할 수 있으며, 서식과 변수의 형태가 일치하지 않으면
+	//원하는 값이 출력되지 않습니다.
+
+	// 값을 바꿀때엔 자료형 char, int, float을 다시 한번 쓸 필요가 없다.
+
+	character = 'B';
+
+	integer = 25;
+
+	decimal = 7.25f;
+
+	printf("\n");
+
+	// 변수는 프로그램이 실행되는 동안 값을 바꿀 수 있으며,
+	// 원래 저장되어 있는 값의 새로 저장되는 값에 의해 지워집니다.
+
+	printf("charater : %c\n : ", character);
+	printf("integer  : %d\n : ", integer);
+	printf("decimal : %f\n : ", decimal);
+                
+	
+#pragma endregion 
+
+
+
+
+#pragma region 상수
+	// 프로그램이 실행되는 동안 더 이상 값을 변경할
+	// 수 없는 메모리 공간입니다.
+
+	const float pi = 3.141592f;
+
+	// 상수의 경우 메모리 공간을 가지고 있지 않은 상수를
+	// 리터럴 상수라고 하며, 메모리 공간을 가지고 있는
+	// 상수를 심볼릭 상수라고 합니다.
+
+	// ex) pi = 6.125f;
+
+	printf("상수의 값 : %f\n", pi);
+
+	//상수는 메모리 공간을 생성하는 동시에 초기화해야 하며,
+	// 한 번 저장된 값은 더 이상 변경할 수 없습니다.
+
+#pragma endregion
+
+
+#pragma region
+
+
+
+
+
+#pragma endregion
+
+
 }
