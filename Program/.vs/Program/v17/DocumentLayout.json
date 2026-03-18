@@ -7,6 +7,9 @@
       "RelativeMoniker": "D:0:0:{306AFCDC-4F2C-4AED-ADD9-086EEBDBAA35}|Program.vcxproj|solutionrelative:Source.C||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{6685394F-9CAD-48AD-B1E8-3CC5F966301B}|..\\class 2th\\class 2th.vcxproj|C:\\Users\\Administrator\\Desktop\\C-language-Lecture\\class 2th\\Source.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{A145A0C1-19D7-46B9-8CD8-7C4A3D2C87F2}|..\\class1th (comfile)\\class1th (comfile).vcxproj|C:\\Users\\Administrator\\Desktop\\C-language-Lecture\\class1th (comfile)\\source.C||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     }
   ],
@@ -17,11 +20,24 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Document",
               "DocumentIndex": 1,
+              "Title": "Source.c",
+              "DocumentMoniker": "C:\\Users\\Administrator\\Desktop\\C-language-Lecture\\class 2th\\Source.c",
+              "RelativeDocumentMoniker": "..\\class 2th\\Source.c",
+              "ToolTip": "C:\\Users\\Administrator\\Desktop\\C-language-Lecture\\class 2th\\Source.c",
+              "RelativeToolTip": "..\\class 2th\\Source.c",
+              "ViewState": "AgIAAFUAAAAAAAAAAAAuwHEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000423|",
+              "WhenOpened": "2026-03-18T09:02:47.427Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "source.C",
               "DocumentMoniker": "C:\\Users\\Administrator\\Desktop\\C-language-Lecture\\class1th (comfile)\\source.C",
               "RelativeDocumentMoniker": "..\\class1th (comfile)\\source.C",
@@ -40,7 +56,7 @@
               "RelativeDocumentMoniker": "Source.C",
               "ToolTip": "C:\\Users\\Administrator\\Desktop\\C-language-Lecture\\Program\\Source.C",
               "RelativeToolTip": "Source.C",
-              "ViewState": "AgIAAE8AAAAAAAAAAAAAAFkAAAAQAAAAAAAAAA==",
+              "ViewState": "AgIAACYAAAAAAAAAAAAowHYAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000423|",
               "WhenOpened": "2026-03-16T09:32:11.738Z",
               "EditorCaption": ""
