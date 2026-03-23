@@ -2,35 +2,46 @@
 
 void main()
 {
-#pragma region 조건문
-	// 어떤 조건이 주어질 때 해당 조건에 따라 동작을
-	// 수행하도록 실행하는 명령문입니다.
+#pragma region 반복문
+	// 프로그램 내에서 특정한 작업을 반복적으로
+	// 수행하는 명령문입니다.
 
-#pragma region 관계 연산자
-	// 두 개의 피연산자의 값을 비교하여 그 결과를 0 또는
-	// 1이라는 값으로 나타내는 연산자입니다.
+#pragma endregion
 
-
-//	printf("10 < 20 : %d\n", 10 < 20);
+#pragma region 증감 연산자
+	// 피연산자를 하나씩 증가시키거나 감소시킬 때
+	// 사용하는 연산자입니다.
+//	char character = 0;
 //
-//	printf("10 > 20 : %d\n", 10 > 20);
+//	int integer = ++character;
 //
-//	printf("10 <= 20 : %d\n", 10 <= 20);
+//	printf("integer: %d\n", integer);
 //
-//	printf("10 >= 20 : %d\n", 10 >= 20);
+//	printf("character: %d\n", character);
 //
-//	printf(" 10 == 20 : %d\n", 10 == 10);
+//	integer = --character;
 //
-//	printf(" 10 != 10 : %d\n", 10 != 10);
+//	printf("integer : %d\n", integer);
 //
-	// 관계 연산자는 조건이 맞을 때, 1이라는 값으로 반환되며,
-	// 조건이 틀릴 때 0이라는 값으로 반환됩니다.
+//	printf("character : %d\n", character);
 
 
-	// 여기서 == 는 같다를 의미하고,
-	// != 는 다르다를 의미합니다.
+		// 전위 증감 연산자는 변수의 값을 증감시킨 후에 
+		// 연산을 수생합니다.
 
+	// ***** 띄어쓰기가 이상하다 싶으면 insert 다시 누르기
 
+//	int character = 0;
+//
+//	int integer = character++;
+//
+//	printf("integer : %d\n", integer);
+//	printf("character : %d\n", character);
+//
+//	integer = character--;
+//
+//	printf("integer : %d\n", integer);
+//	printf("character : %d\n", character);
 
 
 
@@ -39,169 +50,79 @@ void main()
 
 #pragma endregion
 
-#pragma region if문
-	// 어떤 특정한 조건을 비교하여 조건이 맞다면 실행되는
-	// 명령문입니다.
+#pragma region for문
+	// 초기식을 연산하여 조건식의 결과에 따라 특정한
+	// 횟수만큼 반복하는 반복문입니다.
+	// for문은 (초기식; 조건식; 증감식) { 반복할 내용 }
+	// 으로 이루어져 있습니다.
+	// 초기식은 변수 지정, 조건식은 정한 변수에 조건을 달고, 그 다음 증감식은 변수의 앞 뒤에
+	// ++ 과 --를 이용하여 지정합니다.
+	// 마지막으로 반복할 내용엔 printf를 이용해서 반복문의 끝에 출력할 내용을 지정합니다.
 
-//	int man = 0;
-//
-//	if (man <= 0)
+//	for(int x = 0; x < 5; x++)
 //	{
-//		
-//
-//		printf("Destroy");
-//
+//		printf("end\n");
 //	}
 //
-	// if문은 조건이 1일 때 실행되며, 0일 때 실행되지 않습니다.
-
+// 반복문이 동작되는 순서는 초기화 -> 조건 검사 -> 증감의 구조로 동작합니다.
 
 #pragma endregion
 
-#pragma region else if문
-	// if문의 조건이 틀릴 때 else if문의 조건이
-	// 맞다면 실행되는 명령문입니다.
+#pragma region while문
+	// 특정한 조건을 만족할 때까지 계속해서 주어진 명령문을 실행하는 반복문입니다.
 
-//	int level = 1;
+//	int count = 1;
 //
-//	if (level <= 0)
-//	{
-//		printf("success");
+//	while (count <= 5)
+//	{   // while문은 증감식을 무조건 반복할 내용 다음에 적어야한다
+//		// 만약 while () 안에 적고 실행하면 숫자값이 무한대로 증가한다.
 //
+//		printf("count : % d\n", count);
+//
+//		count++;
 //	}
-//	else if (level <= 1)
+	// 반복문은 순차적으로 실행하면서 조건 분기(Branch)를 만나게 되면, 어느 쪽으로
+	// 실행 흐름이 갈지 미리 예측(branch prediction)합니다.
+
+#pragma endregion
+
+#pragma region do-while문 
+	// 많이 사용하지 않는 명령문
+	// 조건과 상관없이 한 번의 작업을 수행한 다음 조건에 따라
+	// 명령문을 실행하는 반복문입니다.
+
+//	int connect = 0;
+//
+//	do
 //	{
-//		printf("fail");
-//
-//	}
-	// else if문은 여러번 정의할 수 있으며, if문이
-	// 존재할 때 사용할 수 있습니다.
+//		printf("lie\n");
+//	} while (connect > 1);
+
 
 #pragma endregion
 
-#pragma region else문
-	// if문과 else if문의 조건이 다 틀리면
-	// 실행되는 명령문입니다.
+#pragma region continue문
+// 해당 조건문만 실행하지 않고, 반복문은 이어서
+// 실행하는 제어문입니다.
 
-//	int integer = 0;
-//
-//	if (integer > 0)
-//	{
-//		printf("yes");
-//
-//	}
-//	else if(integer < 0)
-//	{
-//
-//		printf("yes");
-//
-//	}
-//	else
-//	{
-//
-//		printf("not");
-//
-//	}
+int x = 0;
 
-	// if문의 연결된 모든 조건문의 조건이 맞을 때,
-	// 가장 위에 있는 조건문만 실행됩니다.
+for (int x = 1; x < 11; x++)
+{
+	if (x = 3, 6, 9)
+	continue;
+
+	printf("again");
+}
+
 
 #pragma endregion
 
-#pragma region switch문
-	// 어떤 결과에 따라 그 결과부터 실행되는 명령문입니다.
-
-//char grade = 'G';
-//
-//// switch문은 해당 조건이 완료되었을 때, break문이 없으면
-//// 나머지 밑에 있는 case문까지 계속 실행시키다가 종료합니다.
-//
-//switch (grade)
-//{
-//case 'A': printf("90 to 100 points\n");
-//	break;
-//case 'B': printf("80 to 89 points\n");
-//	break;
-//case 'C': printf("70 to 79 points\n");
-//	break;
-//case 'D': printf("60 to 69 points\n");
-//	break;
-//case 'E': printf("50 to 59 points\n");
-//	break;
-//case 'F': printf("a score lower than 60\n");
-//	break;
-//
-//default : printf("exception");
-//	break;
-//}
-
-// switch문의 경우 조건에 해당하는 값에 따라 조건의
-// 위치로 이동합니다.
-#pragma endregion
-
-#pragma region 논리 연산자
+#pragma region
 
 #pragma endregion
 
-#pragma region AND 연산자
-// 두 개의 조건이 다 성립될 때 실행되는 연산자입니다.
-
-
-//int HP = 90;
-//int MP = 80;
-//
-//if (HP >= 80 && MP >= 70)
-//{
-//
-//	printf("success");
-//
-//}
-// 조건문에서 하나 이상의 조건이 있다면 왼쪽에서부터 조건을 검사합니다.
-		
-#pragma endregion
-
-#pragma region OR 연산자
-// 두 개의 조건 중에 하나라도 조건이 성립될 때 실행되는 연산자입니다.
-
-// int HP = 0;
-// float MP = 90;
-// 
-// if (HP == 90 || MP >= 80)
-// {
-// 
-// 	printf("success");
-// 
-// }
-// else if (HP <= 0 || MP <= 0)
-// {
-// 
-// 	printf("fail");
-// 
-// }
-// 조건문의 논리 표현식을 평가하는 도중에 결과가 이미 확정이 났다면,
-// 그 이후의 평가는 생략합니다.
-
-#pragma endregion
-
-#pragma region NOT 연산자
-// 하나의 조건을 반전시키는 연산자입니다.
-
-// int power = 0;
-// 
-// if (!power)
-// {
-// 	printf("the power if on");
-// }
-// else
-// {
-// 	printf("the power if off");
-// }
-
-#pragma endregion
-
-#pragma region 사분면
-
-
+#pragma region
 
 #pragma endregion
 
