@@ -94,4 +94,104 @@ void main()
 
 #pragma endregion
 
+#pragma region 범용 포인터
+	// 자료형이 정해지지 않은 상태로 모든 자료형을
+	// 저장할 수 있는 포인터입니다.
+
+	// 흔히 void * 변수명을 이용해서 쓰고 byte 수는 8byte입니다.
+
+//	char rank = 'S'; // char 변수는 1byte입니다.
+//
+//	int level = 1;
+//
+//	float attack = 12.5f;
+//	// 포인터 값을 초기화 하려면 NULL을 사용해야합니다.
+//
+//	void* reference = NULL;
+//
+//	reference = &attack;
+//	// reference의 값을 rank 값으로 치환합니다.
+//
+//	// 범용 포인터는 메모리 주소에 접근해서 값을
+//	// 변경할 수 없습니다.
+//
+//	*(char*)reference = 'A';
+//	// 일반적인 역창조는 포인터 *를 앞에 붙히고 뒤엔 포인터 변수를 써서 역창조를 했지만,
+//	// 이미 위에 reference의 값을 rank 값인 A로 바꿨기 때문에 일반적인 역창조는 불가능합니다.
+//	// 그러니 포인터(자료형)을 활용해서 *(char) reference로 바꿀 경우 이미 정한 값을 
+//	// 역창조하여 값을 바꾸는 것이 가능합니다.
+//
+//	reference = &level;
+//
+//	*(int*)reference = 5;
+//
+//	printf("rank :%p\n", &rank);
+//
+//	printf("attack : %p\n", &attack);
+//
+//	printf("reference : %p\n", &reference);
+//
+//	reference = &attack;
+//
+//	*(float*)reference = 17.5f;
+//
+//	printf("attack : %f\n", attack);
+//
+//	printf("reference : %p\n", reference);
+
+
+	// 범용 포인터로 변수의 메모리에 접근하려면 범용 포인터가
+	// 가리키는 변수의 자료형으로 변환해주어야 합니다.
+
+	
+
+
+
+
+
+#pragma endregion
+
+#pragma region 상수 지시 포인터
+// 포인터가 가리키는 주소에 저장되어 있는 값을 변경할 수
+// 없도록 지정되어 있는 포인터입니다.
+
+// int y = 10;
+// 
+// int z = 20;
+// 
+// const int* address = &y; // const라는 키워드를 붙히고 변수의 값을 변경한 경우 
+//                          // 그 이후엔 역창조가 불가능합니다.
+// 
+// 
+// printf("y의 주소 값 : %p\n", &y);
+// 
+// printf("address의 값 : %p\n\n", address);
+// 
+// address = &z;
+// 
+// printf("z의 주소 값 : %p\n", &z);
+// 
+// printf("address의 값 : %p\n", address);
+
+#pragma endregion
+
+#pragma region 포인터 상수
+// 포인터 변수가 가리키고 있는 주소 값을 변경할 수
+// 없는 포인터입니다.
+// 포인터 상수는 const 와는 다르게 자료형 앞에 코드를 넣는게 아닌
+// 변수명 앞에 코드를 넣어야합니다.
+
+int integer = 5;
+
+int* const room = &integer;
+
+*room = 7;
+
+printf("integer 의 주소 값 : %p\n", &integer);
+printf("room 변수가 가리키는 값 : %d\n", *room);
+
+
+
+#pragma endregion
+
 }
