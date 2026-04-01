@@ -1,5 +1,13 @@
 #include <stdio.h>
 
+#include <stdarg.h>
+
+
+// va_arg :  가변 인수 포인터에서 특정 자료형의 크기만큼 값을 가져오는 함수입니다.
+
+// va_end : 가변 인수가 끝났을 때 포인터를 NULL로 초기화하는 함수입니다.
+
+
 
 // 함수는 주로 main 함수가 선언되기 전에 선언합니다.
 // 함수 선언 방법: main 함수 선언 전에 함수 이름을 만듭니다.
@@ -7,7 +15,7 @@ void render(int life)
 {
 	for (int i = 5; i < life; i++)
 	{
-		printf("@");
+		printf("#");
 	}
 
 	printf("\n");
@@ -24,7 +32,43 @@ void swap(int* argument_x, int* argument_y)
 
 }
 
-void main()
+int absolute(int x)
+{
+	return (x < 0) ? -x : x; 
+	// return 삼합 연산자 설명
+	// -x에 -7이 들어가서 -(-7)이라는 식이 나오니 계산하면 7로 출력됩니다.
+	// 반환형을 사용할때 원하는 값으로 바꿀땐 return과 삼합 연산자를 이용하는 것이 쉽다.
+}
+
+void execute(int count)
+{
+
+	if (count <= 0) 
+	{
+		return;
+	}
+
+	execute(count -1);
+
+	printf("count : %d\n", count);
+    
+}
+
+double average(int size, ...) // 지정한 함수 이름 바꾸는 방법: 변수명 우클릭 두번 후에 이름 바꾸기 클릭
+{
+	// va_list : 가변 인수의 메모리 주소를 저장하는 포인터 변수입니다.
+	va_list pointer;
+
+	// va_start : 가변 인수를 가져올 수 있도록 포인터를 설정하는 함수입니다.
+	va_start(pointer, size);
+
+}
+double sum(int room, ...)
+{
+
+}
+
+int main()
 {
 #pragma region 함수
 	// 하나의 특별한 목적의 작업을 수행하기 위해
@@ -78,13 +122,42 @@ void main()
 
 #pragma endregion
 
-#pragma region
+#pragma region 반환형
+	// 함수가 실행을 마치고, 호출한 쪽으로 어떤 자료형의 값을
+	// 반환할 지 미리 알려주는 형식입니다.
+
+	// 반환형을 사용할 때엔 return 값;을 사용해야합니다.
+
+	//printf("%d\n", absolute(-7));
+	
+	// 함수의 경우 자료형과 반환하는 값의 형태가
+	// 일치하지 않으면 원하는 값을 얻을 수 없습니다.
+
 
 #pragma endregion
 
-#pragma region
+#pragma region 재귀 함수
+	// 어떤 함수에서 자신을 다시 호출하여 작업을
+	// 수행하는 함수입니다.
+
+	// execute(3);
+
+	// 재귀 함수는 함수를 계속 호출하기 때문에 스택 영역에
+	// 메모리가 계속 쌓이게 되므로 스택 오버플로우가 발생합니다.
 
 #pragma endregion
 
+#pragma region 가변 인수 목록
+	// 고정되어 있는 매개 변수 외에 개수가 정해지지 않은
+	// 인수를 추가로 받을 수 있는 인수입니다.
 
+	va_list
+
+
+
+
+#pragma endregion
+
+	// 안정성있게 main함수를 끝내거나, 실행하기 위해선 int main과 return0;를 사용해야합니다.
+	return 0;
 }
