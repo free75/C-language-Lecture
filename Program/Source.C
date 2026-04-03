@@ -1,124 +1,109 @@
 #include <stdio.h>
-
-int height = 1;
-
-void pyramid()
-{
-
-	for (int i = 1; i < height; i++)
-	{
-		for (int x = 1; x <= i; x++)
-		{
-			printf("ㅁ");
-		}
-		
-		printf("\n"); 
-		// 피라미드 형식으로 만들기 위해 for문이 작동할 때마다
-		// 줄바꿈이 나오도록 선언합니다.
-	}
-	
-}
+#include <stdlib.h> // 동적 할당을 사용할 수 있게 만들어주는 헤더 파일입니다.
 
 int main()
 {
-#pragma region 메모리 영역
+#pragma region 동적 할당
+	// 프로그램을 실행하는 중에 필요한 만큼 메모리를
+	// 할당하는 작업입니다.
+
+#pragma region malloc allocation
+	// malloc은 포인터를 반환하는 함수입니다.
+	// 프로그램이 실행되는 동안 메모리 관리자에게 메모리를 요청하고
+	// 헤딩하는 메모리의 시작 주소를 반환하는 함수입니다.
+	
+	//int* room = (int *)malloc(sizeof(int));
+	//
+	//*room = 77;
+	//
+	//printf("room의 값 : %d\n", *room);
+	//
+	//free(room); 
+	// free는 동적 할당을 한 함수를 해제하는 것으로,
+	// 동적 할당을 하기 위해 선언한 room이라는 포인터 함수를 free에 선언하면
+	// 값이 해제되어, free 함수 후에 포인터 변수 room의 값을 출력하면
+	// 역참조로 지정해놨던 값이 해제가 되어, 랜덤한 값이 출력되는 것을 볼 수 있습니다.
+
+	// printf("room의 값 : %d\n", room);
+ 
+	// 이미 해제한 메모리를 가리키는 포인터의 경우 예기치 않은
+	// 동작을 유발할 수 있습니다.
+
+	// 동적 할당은 실행 시간에 가변적으로 메모리의 크기를
+	// 변경시킬 수 있으며, 동적으로 메모리의 크기를 할당할 때
+	// 바이트 단위로 지정합니다.
 	
 
 
-
 #pragma endregion
 
-#pragma region CODE 영역
-	// 프로그램을 실행하기 위해 필요한 코드가 저장되는 영역으로
-	// 함수의 주소와 상수가 저장되는 메모리 영역입니다.
+#pragma region contiguous allocation
+	// 연속된 메모리 공간을 확보하고, 모든 요소의 값을 0으로
+	// 초기화된 뒤 메모리의 시작 주소를 반환하는 함수입니다.
 
 
-
-
-
-#pragma endregion
-
-#pragma region DATA 영역
-	// 프로그램의 시작과 함께 메모리에 저장되며, 프로그램이
-	// 종료될 때 메모리가 해제되는 영역입니다.
-
-
-
-
-
-#pragma endregion
-
-#pragma region BSS 영역
-	// 프로그램이 실행될 때 초기화가 이루어지지 않은 전역 변수와
-	// 정적 변수가 저장되는 메모리 영역입니다.
-
-
-
-#pragma endregion
-
-#pragma region STACK 영역
-	// 프로그램이 자동으로 사용하는 임시 메모리 영역으로
-	// 함수 호출 시 생성되는 지역 변수와 매개 변수가 저장
-	// 되는 메모리 영역입니다.
-
-
-#pragma endregion
-
-#pragma region HEAP 영역
-	// 사용자가 직접 메모리 공간을 할당해주는 메모리 영역이며,
-	// 사용하지 않은 경우 사용자가 직접 메모리를 해제해야 되는
-	// 메모리 영역입니다.
-
-#pragma endregion
-
-#pragma region 지역 변수
-	// 함수 내부에서 선언된 변수로 함수 내부에서만 접근할 수 있으며,
-	// 함수가 종료되었을 때 메모리에서 사라지는 특징을 가지고 있는 함수입니다.
-
-	//int x = 10;
+	//int* address = calloc(sizeof(int), 5);
 	//
-	//{ // {} 안에만 있는 함수는 바깥에 있는 함수에 아무런 영향을 끼치지 못합니다.
-	//  // 그리고 이런 {} 안에 써놓은 변수를 지역 변수라 부릅니다.
-	//
-	//	int x = 20;
-	//
-	//	printf("x의 값 : %d\n", x);
+	//for (int i = 0; i < 5; i++)
+	//{
+	//	printf("address[%d] : %d\n", i, address[i]);
 	//}
-	//printf("x의 값 : %d\n", x);
-
-
-#pragma endregion
-
-#pragma region 전역 변수
-	// 함수 내부에서 선언된 변수로 프로그램이 실행될 때
-	// 메모리에 올라가게 되며, 프로그램이 종료되면 메모리
-	// 에서 해제되는 변수입니다.
-
-	height = 6; 
-
-	pyramid();
-	
-#pragma endregion
-
-#pragma region
+	//
+	//free(address);
 
 
 
 #pragma endregion
 
-#pragma region
 
 
 
 #pragma endregion
 
-#pragma region
+#pragma region 
+
+
 
 #pragma endregion
 
-#pragma region
+#pragma region 
+
+
 
 #pragma endregion
+
+#pragma region 
+
+
+
+#pragma endregion
+
+#pragma region 
+
+
+
+#pragma endregion
+
+#pragma region 
+
+
+
+#pragma endregion
+
+#pragma region 
+
+
+
+#pragma endregion
+
+#pragma region 
+
+
+
+#pragma endregion
+
+
+
 
 
 
